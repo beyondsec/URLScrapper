@@ -2,4 +2,4 @@
 
 
 
-A script to scrape urls in HTML website 
+A script to extract urls in HTML website 
