@@ -1,7 +1,13 @@
 from bs4 import BeautifulSoup, SoupStrainer
 import requests
+import argparse
 
-url = "https://target.com/"
+parser = argparse.ArgumentParser(prog="Web URL Scrapper", usage="Parse all URLs on a given webpage.",description="Provide the link with -u/--url.")
+
+
+parser.add_argument("-u", "--url", dest="url", required=True, help="url of the target")
+
+url = parser.parse_args().url
 
 page = requests.get(url)    
 data = page.text
